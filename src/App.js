@@ -44,15 +44,49 @@ class App extends Component {
       0: {
         track: {
           name: '',
+            artists: {
+              0: {
+                name: '',
+              },
+              1: {
+                name: '',
+              }
+            },
+            album: {
+              images: {
+                2: {
+                  height: '',
+                  width: '',
+                  url: '',
+                }
+                }
+              }
+            }
         }
-      },
+      ,
       1: {
         track: {
           name: '',
-        }
-      }
-
-
+            artists: {
+              0: {
+                name: '',
+              },
+              1: {
+                name: '',
+              }
+            },
+            album: {
+              images: {
+                2: {
+                  height: '',
+                  width: '',
+                  url: '',
+                }
+                }
+              }
+            }
+        
+          }
     };
     if (this.state.playlistTracks !== null) {
       playlistTracks = this.state.playlistTracks;
@@ -79,9 +113,17 @@ class App extends Component {
         </div>
         <hr />
         <div>
-          <div> {playlistTracks[0].track.name} </div>
-          <div> {playlistTracks[1].track.name} </div>
+          husk nyt id hvis intet virker
+          <br></br>
+         ownerid: 1113668123
+          <br></br>
+         playlistid: 4SXIBoDpqej5UhVgxnoaWU
 
+          <div> {playlistTracks[0].track.name} - {playlistTracks[0].track.artists[0].name} // {playlistTracks[0].track.artists[1].name} </div>
+          <img alt="lul" src={playlistTracks[0].track.album.images[2].url} height={playlistTracks[0].track.album.images[2].height} width={playlistTracks[0].track.album.images[2].width}/>
+          <div> {playlistTracks[1].track.name} - {playlistTracks[1].track.artists[0].name} // {playlistTracks[1].track.artists[1].name} </div>
+          <img alt="lul" src={playlistTracks[1].track.album.images[2].url} height={playlistTracks[0].track.album.images[2].height} width={playlistTracks[0].track.album.images[2].width}/>
+          
         </div>
 
 
